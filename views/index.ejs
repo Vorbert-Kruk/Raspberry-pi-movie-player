@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <title>Strona z filmikami</title>
+</head>
+<body>
+    <% moviesNames.forEach((name, index) => { %>
+    <div class="container">
+        <div class="movie-card">
+            <h2><%= name.substring(0, name.lastIndexOf('.')) %></h2>
+            <% if(index != currentMovie) {%>
+            <h4></h4>
+            <% } else { %>
+            <h4 class="stop"></h4>
+            <% } %>
+        </div>
+    </div>
+    <% }); %>
+    <script src="./scripts/main.js?ver=1.0.0"></script>
+</body>
+</html>
